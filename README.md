@@ -1,5 +1,5 @@
 # Facility Management System with Spring Dependency
-COMP 373/473 - Project 1 - Joseph Conroy and Nigel Castelino
+COMP 373/473 - Project 2 - Joseph Conroy and Nigel Castelino
 
 # To run a client interface:
 In ClientInterface.java (src/com/fms/client), select the client you want to run by commenting out the other two.
@@ -27,6 +27,7 @@ instantiating to Dependency Injection container (Spring).:
 
 - Implementing Dependency Injection using Spring
 
+
 You need to design and implement:
 
 – Spring container configuration for Dependency Injection for the application that you
@@ -36,11 +37,13 @@ developed in Project 1.
 
 – Dependency relationship using XML
 
+
 Supporting documents:
 
 - Class examples for Dependency Injection.
 
 - Object Wiring Using Spring (http://docs.spring.io/spring/docs/2.5.6/reference/beans.html)
+
 
 Project Expectation:
 
@@ -48,11 +51,13 @@ Project Expectation:
 
 - Submission of Design, Configuration and Code
 
+
 Project Submission and Grading:
 
 - 10% of total grade
 
 - Email the location of your solution for the implementation
+
 
 Project Due Date:
 
