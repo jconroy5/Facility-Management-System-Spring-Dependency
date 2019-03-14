@@ -1,4 +1,4 @@
-# Facility Management System
+# Facility Management System with Spring Dependency
 COMP 373/473 - Project 1 - Joseph Conroy and Nigel Castelino
 
 # To run a client interface:
@@ -18,71 +18,42 @@ UML Domain Model - FMS.png
 
 # Project Description:
 
-Project 1: Facility Management System Design and Implementation
+Project 2: Object Wiring Using Spring – A Facility Management System
+Project Description:
+In this project, we will change the object dependency and collaboration management from directly
+instantiating to Dependency Injection container (Spring).:
 
-In this project, we will start providing an object domain model for Facility Management System by
-addressing the design and implementation using OOP. The aim is to have a domain model that is
-designed using OOP that will be used to study Object relationship and Dependency.
+- Domain Modeling and implementation
 
-Based on the specification provided for a Facility Management System:
+- Implementing Dependency Injection using Spring
 
-– Identify the main entitles of the problem domain.
+You need to design and implement:
 
-– Identify their attributes.
+– Spring container configuration for Dependency Injection for the application that you
+developed in Project 1.
 
-– Identify their relationships.
+– Using ApplicationContext Mechanism
 
-– Identify their roles and responsibilities.
-
-– Discover other objects that facilitate implementing responsibilities.
-
-– Make available all client interfaces/services specified in the specification document
-(Facility, Facility Use, and Facility Maintenance Client Interfaces).
+– Dependency relationship using XML
 
 Supporting documents:
-- Requirement – Facility Management System Specification Document.
-- Object Modeling
-(http://www.ibm.com/developerworks/rational/library/content/RationalEdge/sep04/bell/)
-- A UML Modeling Tool for documentation
+
+- Class examples for Dependency Injection.
+
+- Object Wiring Using Spring (http://docs.spring.io/spring/docs/2.5.6/reference/beans.html)
 
 Project Expectation:
-- Group (only two students in a group) executed project
-- Submission of Design and Code
-- Submission of your DB table structure/model
+
+- Group executed project
+
+- Submission of Design, Configuration and Code
 
 Project Submission and Grading:
-- 15% of total grade
-- Submit the UML model of the Domain Model
-- Submit the location of your solution for the implementation
-- Submit both to TA and Instructor
+
+- 10% of total grade
+
+- Email the location of your solution for the implementation
 
 Project Due Date:
-- Submission of Design and Implementation - EOD 02/24/2019
 
-# Client Interfaces:
-
-Facility (FacilityClient):
-- public object listFacilities ()
-- public object getFacilityInformation()
-- public object requestAvailableCapacity()
-- public object addNewFacility()
-- public void addFacilityDetail()
-- public object removeFacility()
-
-Facility Use (UsageClient):
-- public object isInUseDuringInterval()
-- public object assignFacilityToUse()
-- public object vacateFacility()
-- public object listInspections()
-- public object listActualUsage()
-- public object calcUsageRate()
-
-Facility Maintenance (MaintenanceClient):
-- public object makeFacilityMaintRequest()
-- public object scheduleMaintenance() 
-- public object calcMaintenanceCostForFacility()
-- public object calcProblemRateForFacility()
-- public object calcDownTimeForFacility()
-- public object listMaintRequests()
-- public object listMaintenance()
-- public object listFacilityProblems() 
+- Submission of the Implementation - EOD 03/17/2019 
