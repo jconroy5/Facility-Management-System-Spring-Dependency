@@ -8,7 +8,17 @@
 	<description>Wiring the dependencies for the Facility Management System.</description>
 
 	<context:component-scan base-package="com.fms" />
-	
 
+	<bean id="facilityDetail" class="com.fms.main.FacilityDetailsImpl" scope="prototype"/>
+	<bean id="facility" class="com.fms.main.FacilityImpl" scope="prototype">
+		<property name="facilityDetail" ref="facilityDetail"></property>
+	</bean>
+	<bean id="maintenance" class="com.fms.maintenance.MaintenanceImpl" scope="prototype"/>
+	<bean id="inspection" class="com.fms.usage.FacilityInspectionImpl" scope="prototype"/>
+	<bean id="facilityUse" class="com.fms.usage.FacilityUseImpl" scope="prototype"/>
+
+	<bean id="facilityService" class="com.fms.services.FacilityService" scope="prototype"/>
+	<bean id="maintenanceService" class="com.fms.services.MaintenanceService" scope="prototype"/>
+	<bean id="usageService" class="com.fms.services.UsageService" scope="prototype"/>
 	
 </beans>
