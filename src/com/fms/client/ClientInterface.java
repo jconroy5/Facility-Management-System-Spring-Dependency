@@ -12,9 +12,9 @@ public class ClientInterface {
      */
     public static void main(String[] args) throws Exception {
 
-        FacilityClient facilityClient = new FacilityClient();
+        //FacilityClient facilityClient = new FacilityClient();
         //UsageClient usageClient = new UsageClient();
-        //MaintenanceClient maintenanceClient = new MaintenanceClient();
+        MaintenanceClient maintenanceClient = new MaintenanceClient();
     }
 
 }

@@ -5,20 +5,23 @@ import com.fms.services.*;
 import com.fms.usage.*;
 import java.time.LocalDate;
 import java.util.List;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class UsageClient {
     public UsageClient() throws Exception {
 
-        UsageService useService = new UsageService();
-        FacilityService facilityService = new FacilityService();
+        ApplicationContext context = new ClassPathXmlApplicationContext("META-INF/app-context.xml");
+        UsageService useService = (UsageService) context.getBean("usageService");
+        FacilityService facilityService = (FacilityService) context.getBean("facilityService");
 
         /**
          * Below we'll be adding "office" locations for the fictitious "Super Company" as example Facilities.
          */
 
         //office1
-        Facility office1 = new FacilityImpl();
-        FacilityDetails office1Details = new FacilityDetailsImpl();
+        Facility office1 = (Facility) context.getBean("facility");
+        FacilityDetails office1Details = (FacilityDetails) context.getBean("facilityDetail");
         office1.setFacilityID(1);
         office1Details.setName("Super Company New York");
         office1Details.setLocation("New York, NY");
@@ -26,8 +29,8 @@ public class UsageClient {
         office1.setFacilityDetail(office1Details);
 
         //office2
-        Facility office2 = new FacilityImpl();
-        FacilityDetails office2Details = new FacilityDetailsImpl();
+        Facility office2 = (Facility) context.getBean("facility");
+        FacilityDetails office2Details = (FacilityDetails) context.getBean("facilityDetail");
         office2.setFacilityID(2);
         office2Details.setName("Super Company Atlanta");
         office2Details.setLocation("Atlanta, GA");
@@ -35,8 +38,8 @@ public class UsageClient {
         office2.setFacilityDetail(office2Details);
 
         //office3
-        Facility office3 = new FacilityImpl();
-        FacilityDetails office3Details = new FacilityDetailsImpl();
+        Facility office3 = (Facility) context.getBean("facility");
+        FacilityDetails office3Details = (FacilityDetails) context.getBean("facilityDetail");
         office3.setFacilityID(3);
         office3Details.setName("Super Company Los Angeles");
         office3Details.setLocation("Los Angeles, CA");
@@ -44,8 +47,8 @@ public class UsageClient {
         office3.setFacilityDetail(office3Details);
 
         //office4
-        Facility office4 = new FacilityImpl();
-        FacilityDetails office4Details = new FacilityDetailsImpl();
+        Facility office4 = (Facility) context.getBean("facility");
+        FacilityDetails office4Details = (FacilityDetails) context.getBean("facilityDetail");
         office4.setFacilityID(4);
         office4Details.setName("Super Company Austin");
         office4Details.setLocation("Austin, TX");
@@ -62,10 +65,10 @@ public class UsageClient {
         }
 
         //new Facility (office5) that will be checked for usage interval
-        Facility office5 = new FacilityImpl();
-        FacilityUse officeUse = new FacilityUseImpl();;
+        Facility office5 = (Facility) context.getBean("facility");
+        FacilityUse officeUse = (FacilityUse) context.getBean("facilityUse");
         officeUse.setFacilityID(5);
-        FacilityDetails officeDetails = new FacilityDetailsImpl();
+        FacilityDetails officeDetails = (FacilityDetails) context.getBean("facilityDetail");
         officeDetails.setNumberOfRooms(20);
         officeDetails.setName("Super Company Chicago");
         officeDetails.setLocation("Chicago, IL");
