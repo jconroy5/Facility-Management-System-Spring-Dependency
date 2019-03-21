@@ -1,6 +1,8 @@
 # Facility Management System with Spring Dependency
 COMP 373/473 - Project 2 - Joseph Conroy and Nigel Castelino
 
+Based on our original Facility Management System (https://github.com/jconroy5/FacilityManagementSystem), this program utilizes the Spring Dependency Framework.
+
 # To run a client interface:
 In ClientInterface.java (src/com/fms/client), select the client you want to run by commenting out the other two.
 
